@@ -1,13 +1,14 @@
 {
   "scripts": {
     "api": "node ratingsAPI.js",
-    "format": "prettier --list-different --single-quote --print-width=120 \"js/**/*.{js,jsx}\"",
-    "lint": "eslint **/*.{js,jsx} --quiet",
     "build": "webpack",
     "dev": "webpack-dev-server",
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:update": "jest -u",
-    "test:coverage": "jest --coverage"
+    "watch": "webpack --watch"
   },
   "jest": {
     "snapshotSerializers": ["jest-serializer-enzyme"]
