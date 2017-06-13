@@ -8,6 +8,10 @@ module.exports = {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
+  devServer: {
+    publicPath: '/public/',
+    historyApiFallback: true
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   },
