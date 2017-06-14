@@ -3,7 +3,7 @@
     "api": "node ratingsAPI.js",
     "build": "webpack",
     "build:universal": "NODE_ENV=server node server.js",
-    "dev": "webpack-dev-server",
+    "dev": "NODE_ENV=server nodemon server.js",
     "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "jest",

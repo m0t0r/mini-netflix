@@ -32,7 +32,7 @@ const Header = (props: {
   return (
     <header>
       <h1>
-        <Link to="/">mini-netflix v2</Link>
+        <Link to="/">mini-netflix</Link>
       </h1>
       {utilSpace}
     </header>
