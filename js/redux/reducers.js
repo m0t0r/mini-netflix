@@ -12,7 +12,7 @@ const searchTermReducer = (state = '', action: Action) => {
   }
 };
 
-const addApiReducer = (state = {}, action: Action) => {
+const apiDataReducer = (state = {}, action: Action) => {
   switch (action.type) {
     case ADD_API_DATA:
       return Object.assign({}, state, {[action.payload.imdbID]: action.payload});
@@ -23,7 +23,7 @@ const addApiReducer = (state = {}, action: Action) => {
 
 const rootReducer =  combineReducers({
   searchTerm: searchTermReducer,
-  addApi: addApiReducer
+  apiData: apiDataReducer
 });
 
 export default rootReducer;

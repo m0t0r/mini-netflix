@@ -4,7 +4,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ShowCard from './ShowCard';
 import Header from './Header';
-import { setSearchTermAction } from './redux/action-creators';
 
 const Search = (props: {
   searchTerm: string, // eslint-disable-line react/no-unused-prop-types
