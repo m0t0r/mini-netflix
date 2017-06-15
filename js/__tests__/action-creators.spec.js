@@ -1,7 +1,8 @@
 // @flow
 
 import moxios from 'moxios';
-import { setSearchTermAction, addApiDataAction, getApiData } from '../redux/action-creators';
+import { setSearchTermAction, addApiDataAction } from '../redux/action-creators';
+import getApiData from '../redux/async-actions';
 
 const orangeIsTheNewBlackShow = {
   rating: '0.8',

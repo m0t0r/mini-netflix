@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from './Header';
 import Spinner from './Spinner';
-import { getApiData } from './redux/action-creators';
+import getApiData from './redux/async-actions';
 
 class Details extends Component {
 

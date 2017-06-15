@@ -7,6 +7,7 @@ const ReactDOMServer = require('react-dom/server');
 const ReactRouter = require('react-router-dom');
 const _ = require('lodash');
 const fs = require('fs');
+const compression = require('compression');
 const App = require('./js/App').default;
 
 const StaticRouter = ReactRouter.StaticRouter;
@@ -17,6 +18,7 @@ const PORT = 8080;
 
 const server = express();
 
+server.use(compression());
 server.use('/public', express.static('./public'));
 
 server.use((req, res) => {
