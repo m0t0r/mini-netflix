@@ -9,11 +9,6 @@ const _ = require('lodash');
 const fs = require('fs');
 const App = require('./js/App').default;
 
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-const webpack = require('webpack');
-const config = require('./webpack.config');
-
 const StaticRouter = ReactRouter.StaticRouter;
 const baseTemplate = fs.readFileSync('./index.html');
 const template = _.template(baseTemplate);
@@ -21,16 +16,6 @@ const template = _.template(baseTemplate);
 const PORT = 8080;
 
 const server = express();
-
-const compiler = webpack(config);
-
-server.use(
-  webpackDevMiddleware(compiler, {
-    publicPath: config.output.publicPath
-  })
-);
-
-server.use(webpackHotMiddleware(compiler));
 
 server.use('/public', express.static('./public'));
 
